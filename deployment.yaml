@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: notice-board-deployment
-  labels:
-    app: notice-board
 spec:
   replicas: 2
   selector:
@@ -15,8 +13,8 @@ spec:
         app: notice-board
     spec:
       containers:
-      - name: notice-board-container
-        image: Arjun262007/college-notice-board:latest
+      - name: notice-board
+        image: arjun262007/college-notice-board:latest
         ports:
         - containerPort: 80
 ---
